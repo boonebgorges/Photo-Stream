@@ -277,6 +277,9 @@ img.aligncenter {
 }
 
 /* Gallery Styles */
+.entry h2.entry-title a {
+	border: none;
+}
 #content .entry .gallery-thumb a,
 #content .entry .gallery-icon a {
 	border: none;

@@ -17,8 +17,6 @@
 
 	<?php if ( ( function_exists( 'get_post_format' ) && 'gallery' == get_post_format( $post->ID ) ) || in_category( _x( 'gallery', 'gallery category slug', 'photostream' ) ) ) : ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			
-			<h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 
 			<div class="entry">
 				<?php
@@ -31,13 +29,12 @@
 						<div class="gallery-thumb">
 							<a class="size-thumbnail" href="<?php the_permalink(); ?>"><?php echo $image_img_tag; ?></a>
 						</div><!-- .gallery-thumb -->
+						<h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 						<p><em><?php printf( _n( 'This gallery contains <a %1$s>%2$s photo</a>.', 'This gallery contains <a %1$s>%2$s photos</a>.', $total_images, 'photostream' ),
 								'href="' . get_permalink() . '" title="' . sprintf( esc_attr__( 'Permalink to %s', 'photostream' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark"',
 								number_format_i18n( $total_images )
 							); ?></em></p>
 				<?php endif; ?>
-				
-				<?php the_excerpt('Read more &raquo;'); ?>
 			</div><!-- .entry -->
 			
 			<div class="entry-meta">
