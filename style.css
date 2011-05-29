@@ -353,6 +353,9 @@ img.aligncenter {
 .attachment .page-title a {
 	color: #666;
 }
+.attachment .page-title a:hover {
+	color: #fff;
+}
 .attachment .entry-meta {
 	color: #666;
 	margin-bottom: 14px;
