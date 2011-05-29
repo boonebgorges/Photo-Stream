@@ -413,10 +413,6 @@ img.aligncenter {
 }
 
 /* Comment Styles */
-#comments {
-//	border-top: 1px solid #A5ABAB;
-	margin-top: -20px;
-}
 .page #comments {
 	border: none;
 }
@@ -435,7 +431,7 @@ img.aligncenter {
 }
 .commentlist li.comment {
 	margin: 0 0 20px;
-	padding: 0 0 0 54px;
+	padding: 0 0 0 74px;
 	position: relative;
 }
 .commentlist li:last-child {
@@ -466,7 +462,10 @@ img.aligncenter {
 	font-size: 14px;
 }
 .comment .commentmetadata a:hover {
-	color: #ba2000;
+	color: #fff;
+}
+.comment .comment-body a {
+	border-bottom: 1px solid #e1e1e1;
 }
 .reply .comment-reply-link {
 	color: #999;
@@ -476,9 +475,18 @@ img.aligncenter {
 }
 #commentform input,
 #commentform textarea {
+	border: 1px solid #333;
+	background-color: #444;
+	color: #fff;
 	font-size: 12px;
-	line-height: 18px;
+	line-height: 21px;
+	padding: 4px;
 	width: 100%;
+}
+#commentform input:focus,
+#commentform textarea:focus {
+	background-color: #666;
+	color: #fff;
 }
 #commentform label {
 	color: #999;
@@ -494,7 +502,7 @@ img.aligncenter {
 	font-size: 11px;
 }
 #commentform #submit {
-	color: #333;
+	color: #fff;
 	font-size: 14px;
 	width: auto;
 }
